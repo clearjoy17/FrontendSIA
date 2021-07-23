@@ -3,7 +3,7 @@
 
     <b-modal id="deleteStockModal" title="Stock Entry" ok-title="Delete Stock" @ok="onDelete" ok-variant="danger">
       Are you sure about deleting this stock? <br>
-      {{ stock.items }} {{ stock.description }}
+      {{ stock.item_name }} {{ stock.description }}
     </b-modal>
   </div>
 </template>

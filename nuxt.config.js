@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Frontend',
+    title: 'authdemo',
     htmlAttrs: {
       lang: 'en'
     },
@@ -44,18 +44,16 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/auth-next'
-
   ],
 
   router: {
     middleware: ['auth']
   },
-
   auth: {
     strategies: {
       local: {
         token: {
-          property: 'access_token',
+          property: 'access token',
           global: true,
           type: 'bearer'
         },
@@ -63,24 +61,23 @@ export default {
           property: false
         },
         endpoints: {
-          login: {url: 'http://localhost:8000/api/login', method: 'post'},
+          login: {url: '/api/login', method: 'post'},
           logout: {url: '/api/logout', method: 'post'},
           user: {url: '/api/user', method: 'get'},
           register: {url: '/api/register', method: 'post'},
         }
       }
     },
-    redirect: {
+    redirect:{
       login: '/login',
       logout: '/login',
       home: '/dashboard'
     }
   },
 
-
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseUrl: 'http://localhost:8000'
+    baseUrl: 'https://lentrix.tk/petalino'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

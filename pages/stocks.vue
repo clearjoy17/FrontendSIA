@@ -7,7 +7,7 @@
     <div class="container">
       <h1>
         Stocks
-        <inventoryEntryModal class="float-right" @onAdd="getAll" />
+        <stockEntryModal class="float-right" @onAdd="getAll" />
       </h1>
       <table class="table table-bordered tabled-striped">
         <thead>
@@ -49,7 +49,7 @@ export default {
   data() {
     return {
       stocks: [],
-      selectedStocks: {}
+      selectedStock: {}
     }
   },
   methods: {
